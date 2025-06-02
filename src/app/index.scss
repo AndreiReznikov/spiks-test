@@ -17,9 +17,10 @@
 
   &::-webkit-scrollbar-thumb {
     background-color: config.$colors-black;
-  }    
+  }
 }
 
 html {
   scroll-behavior: smooth;
+  // background-color: config.$colors-background-default;
 }
