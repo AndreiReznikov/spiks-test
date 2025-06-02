@@ -1,6 +1,7 @@
 @use '../core/config/scss' as config;
 @use '../core/lib/scss' as lib;
 @use '../core/ui/layout';
+@use '../pages';
 
 * {
   margin: 0;
