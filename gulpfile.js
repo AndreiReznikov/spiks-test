@@ -97,6 +97,15 @@ function scripts() {
     .pipe(localServer.stream())
 }
 
+function copyNoUiSlider() {
+  return src([
+    'node_modules/nouislider/dist/nouislider.min.js',
+    'node_modules/nouislider/dist/nouislider.min.css'
+  ])
+    .pipe(dest(`${stageDirname}/libs/nouislider`))
+    .pipe(localServer.stream());
+}
+
 //If Pug
 function pugMaker() {
   return src('src/pages/*.pug')
@@ -159,6 +168,7 @@ async function clean() {
 
 function watching() {
   watch(['src/**/*.js'], scripts)
+  watch(['src/**/*.js'], copyNoUiSlider)
   watch(['src/**/*.+(scss|sass)'], styles).on(
     'change',
     localServer.reload
@@ -193,6 +203,7 @@ function deploy() {
 exports.localServer = localServer
 exports.clean = clean
 exports.scripts = scripts
+exports.copyNoUiSlider = copyNoUiSlider
 exports.styles = styles
 exports.pages = pages
 exports.pugMaker = pugMaker
@@ -206,6 +217,7 @@ exports.default = parallel(
   scripts,
   copyResources,
   buildSvgSprites(),
+  copyNoUiSlider,
   pugMaker,
   pages,
   upLocalServer,
@@ -218,6 +230,7 @@ exports.build = series(
   scripts,
   copyResources,
   buildSvgSprites(),
+  copyNoUiSlider,
   pugMaker,
   pages,
 )
@@ -228,6 +241,7 @@ exports.deploy = series(
   scripts,
   copyResources,
   buildSvgSprites(),
+  copyNoUiSlider,
   pugMaker,
   pages,
   deploy

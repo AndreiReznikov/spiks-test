@@ -1,6 +1,7 @@
 extends ../core/ui/layout/templates/default.pug
 include ../components/logo/logo.pug
 include ../components/search/search.pug
+include ../components/slider/slider.pug
 
 block title
   | Marketplace
@@ -13,3 +14,5 @@ block workarea
       +search({
         placeholder: "Search",
       })
+    .header__slider-wrapper
+      +slider()
