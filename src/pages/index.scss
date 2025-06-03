@@ -1,6 +1,11 @@
 @use '../components/search/search';
+@use '../components/checkbox-list/checkbox-list';
 
 .main__checkbox-list-wrapper {
+  width: 243px;
   margin: 50px;
-  background: white;
+  padding: 20px;
+  background: #353542;
+  border: 1px solid #6bab2b;
+  border-radius: 10px;
 }
