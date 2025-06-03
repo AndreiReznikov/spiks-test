@@ -1,5 +1,6 @@
 @use '../components/search/search';
 @use '../components/slider/slider';
+@use '../components/badge/badge';
 @use '../components/checkbox-list/checkbox-list';
 
 .main__logo-wrapper {
@@ -16,6 +17,8 @@
 }
 
 .main__badge-wrapper {
+  display: flex;
+  gap: 10px;
   margin: 50px;
 }
 

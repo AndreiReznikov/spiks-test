@@ -45,10 +45,12 @@ class Badge {
     checkboxStates.forEach((state) => {
       if (state.checked) {
         layoutTemplate += `
-          <button class="badge" data-id="${state.id}">
+          <div class="badge" data-id="${state.id}">
             <span class="badge__text">${state.text}</span>
-            <span class="badge__close">x</span>
-          </button>
+            <button class="badge__close">
+              <span class="badge__close-icon"></span>
+            </button>
+          </div>
         `;
       }
     });
