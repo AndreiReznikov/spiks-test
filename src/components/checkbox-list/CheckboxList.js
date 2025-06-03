@@ -3,7 +3,7 @@ class CheckboxList {
     this._findElements();
     this._toggleLists();
     this._checkListsItem();
-    this._addListeners();
+    this._addObserverListeners();
     this._setCheckboxStatus(window.app.config.state.data);
   }
 
@@ -63,7 +63,7 @@ class CheckboxList {
     list.classList.toggle('checkbox-list_opened');
   };
 
-  _addListeners() {
+  _addObserverListeners() {
     window.app.config.state.subscribe(this._setCheckboxStatus.bind(this));
   }
 }

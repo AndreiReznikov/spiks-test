@@ -1,2 +1,7 @@
-mixin slider()
-  div(id="slider")
+mixin slider(options = {})
+  .slider
+    .slider__title=options.title
+    .slider__container(class=options.className)
+    .slider__limits
+      .slider__limit-min=options.min
+      .slider__limit-max=options.max

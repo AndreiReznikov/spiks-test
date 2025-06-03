@@ -2,6 +2,7 @@ class Badge {
   init(containerName) {
     this._findElements(containerName);
     this._addListeners();
+    this._addObserverListeners();
     this._renderBadges(window.app.config.state.data);
   }
 
@@ -55,8 +56,11 @@ class Badge {
     this.badgesContainer.innerHTML = layoutTemplate;
   }
 
-  _addListeners() {
+  _addObserverListeners() {
     window.app.config.state.subscribe(this._renderBadges);
+  }
+
+  _addListeners() {
     this.badgesContainer.addEventListener('click', this._handleBadgeClick);
   }
 }

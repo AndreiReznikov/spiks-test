@@ -16,7 +16,13 @@ block workarea
         placeholder: "Search",
       })
     .main__slider-wrapper
-      +slider()
+      +slider({
+        className: 'slider-no-ui',
+        title: 'Price Range',
+        min: 0,
+        max: 100,
+      })
+    .main__badge-wrapper
     .main__checkbox-list-wrapper
       +checkbox-list({
         id: '0',
@@ -99,4 +105,3 @@ block workarea
           },
         ],
       })
-    .main__badge-wrapper

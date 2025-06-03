@@ -1,20 +1,34 @@
-const slider = document.getElementById('slider');
-
-noUiSlider.create(slider, {
-    start: [0, 5042],
-    connect: true,
-    step: 1,
-    range: {
-        'min': 234,
-        'max': 9999,
-    },
-    tooltips: [false, true],
-    format: {
-        to: (value) => Math.round(value) + ' $',
-        from: (value) => value,
+class Slider {
+  defaultOptions = {
+    start: 50, range: {
+      min: 0,
+      max: 100,
     }
-});
+  };
 
-// slider.noUiSlider.on('update', function () {
-//     console.log(slider.noUiSlider.get())
-// });
+  init(containerName, options) {
+    this._findElements(containerName);
+    this._initializePlugin(options);
+    this._setLimitsValues();
+  }
+
+  _findElements(containerName) {
+    this.sliderContainer = document.querySelector(containerName);
+    this.limitMin = document.querySelector('.slider__limit-min');
+    this.limitMax = document.querySelector('.slider__limit-max');
+  }
+
+  _initializePlugin(options = this.defaultOptions) {
+    noUiSlider.create(this.sliderContainer, options);
+  }
+
+  _setLimitsValues() {
+    this.sliderContainer.noUiSlider.on('update', () => {
+      const [_, to] = this.sliderContainer.noUiSlider.get();
+      const max = this.sliderContainer.noUiSlider.options.range.max;
+
+      this.limitMin.textContent = to;
+      this.limitMax.textContent = max + ' $';
+    });
+  }
+}
