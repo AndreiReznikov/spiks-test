@@ -18,42 +18,42 @@
       filters: {
         checkboxes: [
           {
-            id: 0,
+            id: '0',
             title: "Classification",
             checkboxState: [
               {
-                id: 0,
+                id: '0',
                 text: "Vegetables",
                 checked: true,
               },
               {
-                id: 1,
+                id: '1',
                 text: "Carbs",
                 checked: false,
               },
               {
-                id: 2,
+                id: '2',
                 text: "Fats",
                 checked: true,
               },
             ],
           },
           {
-            id: 1,
+            id: '1',
             title: "Classification",
             checkboxState: [
               {
-                id: 0,
+                id: '0',
                 text: "Vegetables",
                 checked: true,
               },
               {
-                id: 1,
+                id: '1',
                 text: "Carbs",
                 checked: false,
               },
               {
-                id: 2,
+                id: '2',
                 text: "Fats",
                 checked: true,
               },

@@ -3,7 +3,6 @@ class CheckboxList {
     this._findElements();
     this._toggleLists();
     this._checkListsItem();
-    window.app.config.state.subscribe((data) => console.log(data));
   }
 
   _findElements() {
@@ -18,7 +17,7 @@ class CheckboxList {
 
   _checkListsItem() {
     this.listsCollection.forEach((list) => {
-      const listId = +list.dataset.id;
+      const listId = list.dataset.id;
       const currentState = window.app.config.state.data;
       const checkboxList = currentState.filters.checkboxes.find((list) => list.id === listId);
 
@@ -28,7 +27,7 @@ class CheckboxList {
         const item = event.target.closest('.checkbox-list__item');
         if (!item) return;
 
-        const itemId = +item.dataset.id;
+        const itemId = item.dataset.id;
         const checkboxItem = checkboxList.checkboxState.find((item) => item.id === itemId);
         checkboxItem.checked = !checkboxItem.checked;
 
