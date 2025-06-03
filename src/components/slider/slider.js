@@ -15,6 +15,6 @@ noUiSlider.create(slider, {
     }
 });
 
-slider.noUiSlider.on('update', function () {
-    console.log(slider.noUiSlider.get())
-});
+// slider.noUiSlider.on('update', function () {
+//     console.log(slider.noUiSlider.get())
+// });

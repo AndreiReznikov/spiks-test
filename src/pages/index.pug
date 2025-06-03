@@ -19,19 +19,44 @@ block workarea
       +slider()
     .main__checkbox-list-wrapper
       +checkbox-list({
+        id: 0,
         title: "Classification",
         checkboxState: [
           {
+            id: 0,
             text: "Vegetables",
             checked: true,
           },
           {
+            id: 1,
             text: "Carbs",
             checked: false,
           },
           {
+            id: 2,
             text: "Fats",
             checked: true,
+          },
+        ],
+      })
+      +checkbox-list({
+        id: 1,
+        title: "Classification",
+        checkboxState: [
+          {
+            id: 0,
+            text: "Vegetables",
+            checked: false,
+          },
+          {
+            id: 1,
+            text: "Carbs",
+            checked: true,
+          },
+          {
+            id: 2,
+            text: "Fats",
+            checked: false,
           },
         ],
       })

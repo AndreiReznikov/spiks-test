@@ -2,6 +2,8 @@ class CheckboxList {
   init() {
     this._findElements();
     this._toggleLists();
+    this._checkListsItem();
+    window.app.config.state.subscribe((data) => console.log(data));
   }
 
   _findElements() {
@@ -11,6 +13,27 @@ class CheckboxList {
   _toggleLists() {
     this.listsCollection.forEach((list) => {
       list.addEventListener('click', (event) => this._handleTitleToggleList(event, list));
+    });
+  }
+
+  _checkListsItem() {
+    this.listsCollection.forEach((list) => {
+      const listId = +list.dataset.id;
+      const currentState = window.app.config.state.data;
+      const checkboxList = currentState.filters.checkboxes.find((list) => list.id === listId);
+
+      list.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        const item = event.target.closest('.checkbox-list__item');
+        if (!item) return;
+
+        const itemId = +item.dataset.id;
+        const checkboxItem = checkboxList.checkboxState.find((item) => item.id === itemId);
+        checkboxItem.checked = !checkboxItem.checked;
+
+        window.app.config.state.setState(currentState);
+      });
     });
   }
 
