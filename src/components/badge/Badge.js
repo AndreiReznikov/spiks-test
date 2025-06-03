@@ -3,24 +3,47 @@ class Badge {
     this._findElements(containerName);
     this._addListeners();
     this._renderBadges(window.app.config.state.data);
-    window.app.config.state.subscribe((data) => console.log(data));
   }
 
   _findElements(containerName) {
     this.badgesContainer = document.querySelector(containerName);
+    this.badgesCollection = document.querySelectorAll('.badge');
   }
 
-  _renderBadges(data) {
+  _toggleCheckboxState(checkboxId) {
+    for (const group of window.app.config.state.data.filters.checkboxes) {
+      const checkbox = group.checkboxState.find(item => item.id === checkboxId);
+      if (checkbox) {
+        checkbox.checked = !checkbox.checked;
+  
+        window.app.config.state.setState(window.app.config.state.data);
+      }
+    }
+  }
+
+  _handleBadgeClick = (event) => {
+    const badge = event.target.closest('.badge');
+    if (!badge) return;
+
+    const closeBtn = event.target.closest('.badge__close');
+    if (closeBtn) {
+      event.preventDefault();
+      const checkboxId = badge.dataset.id;
+
+      this._toggleCheckboxState(checkboxId);
+    }
+  }
+
+  _renderBadges = (data) => {
     let layoutTemplate = '';
 
     const checkboxStates = data.filters.checkboxes
-      .map(item => item.checkboxState)
-      .flat();
+      .flatMap(item => item.checkboxState);
 
     checkboxStates.forEach((state) => {
       if (state.checked) {
         layoutTemplate += `
-          <button class="badge" data-id=${state.id}>
+          <button class="badge" data-id="${state.id}">
             <span class="badge__text">${state.text}</span>
             <span class="badge__close">x</span>
           </button>
@@ -32,6 +55,7 @@ class Badge {
   }
 
   _addListeners() {
-    window.app.config.state.subscribe(this._renderBadges.bind(this));
+    window.app.config.state.subscribe(this._renderBadges);
+    this.badgesContainer.addEventListener('click', this._handleBadgeClick);
   }
 }

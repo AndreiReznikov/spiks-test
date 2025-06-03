@@ -22,17 +22,17 @@
             title: "Classification",
             checkboxState: [
               {
-                id: '0',
+                id: '00',
                 text: "Vegetables",
                 checked: true,
               },
               {
-                id: '1',
+                id: '01',
                 text: "Carbs",
                 checked: false,
               },
               {
-                id: '2',
+                id: '02',
                 text: "Fats",
                 checked: true,
               },
@@ -43,17 +43,17 @@
             title: "Classification",
             checkboxState: [
               {
-                id: '0',
+                id: '10',
                 text: "Vegetables",
                 checked: true,
               },
               {
-                id: '1',
+                id: '11',
                 text: "Carbs",
                 checked: false,
               },
               {
-                id: '2',
+                id: '12',
                 text: "Fats",
                 checked: true,
               },
