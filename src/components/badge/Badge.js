@@ -12,10 +12,10 @@ class Badge {
 
   _toggleCheckboxState(checkboxId) {
     for (const group of window.app.config.state.data.filters.checkboxes) {
-      const checkbox = group.checkboxState.find(item => item.id === checkboxId);
+      const checkbox = group.checkboxState.find((item) => item.id === checkboxId);
       if (checkbox) {
         checkbox.checked = !checkbox.checked;
-  
+
         window.app.config.state.setState(window.app.config.state.data);
       }
     }
@@ -38,7 +38,8 @@ class Badge {
     let layoutTemplate = '';
 
     const checkboxStates = data.filters.checkboxes
-      .flatMap(item => item.checkboxState);
+      .map(item => item.checkboxState)
+      .flat()
 
     checkboxStates.forEach((state) => {
       if (state.checked) {
