@@ -2,6 +2,7 @@ extends ../core/ui/layout/templates/default.pug
 include ../components/logo/logo.pug
 include ../components/search/search.pug
 include ../components/slider/slider.pug
+include ../components/checkbox-list/checkbox-list.pug
 
 block title
   | Marketplace
@@ -10,9 +11,27 @@ block workarea
   main.main
     .main__logo-wrapper
       +logo()
-    .main__search-input-wrapper
+    .main__search-wrapper
       +search({
         placeholder: "Search",
       })
     .main__slider-wrapper
       +slider()
+    .main__checkbox-list-wrapper
+      +checkbox-list({
+        title: "Classification",
+        checkboxState: [
+          {
+            text: "Vegetables",
+            checked: true,
+          },
+          {
+            text: "Carbs",
+            checked: false,
+          },
+          {
+            text: "Fats",
+            checked: true,
+          },
+        ],
+      })
