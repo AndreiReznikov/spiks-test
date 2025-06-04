@@ -2,7 +2,8 @@
 
 .badge {
   display: flex;
-  padding: 5px 8px;
+  align-items: center;
+  padding: 6px 7px;
   background: config.$colors-dark-green;
   border: none;
   border-radius: 20px;
@@ -18,8 +19,8 @@
     align-items: center;
     justify-content: center;
     margin-left: 8px;
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
     padding: 0;
     border: none;
     background: config.$colors-light-green;

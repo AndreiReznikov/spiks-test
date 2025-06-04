@@ -4,13 +4,14 @@
   color: config.$colors-white;
 
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
+    font-weight: bold;
   }
 
   &__limits {
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
+    margin-top: 14px;
   }
 
   &__limit-min,
@@ -60,7 +61,8 @@
   }
 
   &-horizontal &-tooltip {
-    bottom: 180%;
+    bottom: 172%;
+    padding: 3px 5px;
     color: config.$colors-white;
     background: config.$colors-slider-gray;
     border: none;

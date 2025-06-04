@@ -11,39 +11,68 @@ body {
   @include lib.font("ProximaNova", 400, "proxima-nova-regular");
 
   font-family: "ProximaNova", Arial, sans-serif;
+  color: config.$colors-white;
   background-color: config.$colors-bg-color;
 }
 
-.main__logo-wrapper {
-  margin: 50px;
-}
+.main {
+  width: 100%;
+  max-width: 1489px;
+  margin: 0 auto;
+  padding: 22px;
 
-.main__search-wrapper {
-  margin: 50px;
-}
+  &__search-block {
+    display: flex;
+  }
 
-.main__slider-wrapper {
-  width: 255px;
-  margin: 50px;
-}
+  &__logo-wrapper {
+    margin: 14px;
+  }
 
-.main__badge-wrapper {
-  display: flex;
-  gap: 10px;
-  margin: 50px;
-}
+  &__search-wrapper {
+    width: 100%;
+    margin-left: 3px;
+  }
 
-.main__checkbox-list-wrapper {
-  width: 243px;
-  margin: 50px;
-  padding: 1px;
-  background: config.$colors-border-gradient;
-  border-radius: 10px;
-}
+  &__slider-wrapper {
+    width: 227px;
+    margin: 17px 0 0 11px;
+  }
 
-.main__checkbox-list {
-  margin: 0 1px;
-  padding: 15px;
-  background: config.$colors-unactive-input;
-  border-radius: 10px;
+  &__result-block {
+    display: flex;
+    align-items: center;
+    margin: 12px;
+  }
+
+  &__result-count {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  &__badge-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-left: 30px;
+  }
+
+  &__checkbox-list-wrapper {
+    width: 243px;
+    margin: 30px 5px;
+    padding: 1px;
+    background: config.$colors-border-gradient;
+    border-radius: 10px;
+  }
+
+  &__checkbox-list {
+    margin: 0 1px;
+    padding: 14px 15px 2px 15px;
+    background: config.$colors-unactive-input;
+    border-radius: 10px;
+  }
+
+  &__checkbox-list-group {
+    margin-bottom: 18px;
+  }
 }
