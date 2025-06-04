@@ -2,9 +2,12 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [marketplace-test]
+    branches: [marketplace-test, build]
   pull_request:
-    branches: [marketplace-test]
+    branches: [marketplace-test, build]
+
+permissions:
+  contents: write
 
 jobs:
   build:
