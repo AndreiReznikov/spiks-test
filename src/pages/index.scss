@@ -1,14 +1,16 @@
-@use '../core/config/scss' as config;
-@use '../core/lib/scss' as lib;
-@use '../components/search/search';
-@use '../components/slider/slider';
-@use '../components/badge/badge';
-@use '../components/checkbox-list/checkbox-list';
+@use "../core/config/scss" as config;
+@use "../core/lib/scss" as lib;
+@use "../components/search/search";
+@use "../components/slider/slider";
+@use "../components/badge/badge";
+@use "../components/checkbox-list/checkbox-list";
 
-html, body {
-  @include lib.font('Proxima Nova', 600, 'proxima-nova');
+html,
+body {
+  @include lib.font("ProximaNova", 600, "proxima-nova-semibold");
+  @include lib.font("ProximaNova", 400, "proxima-nova-regular");
 
-  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-family: "ProximaNova", Arial, sans-serif;
   background-color: config.$colors-bg-color;
 }
 
@@ -34,8 +36,14 @@ html, body {
 .main__checkbox-list-wrapper {
   width: 243px;
   margin: 50px;
-  padding: 20px;
-  background: #353542;
-  border: 1px solid #6bab2b;
+  padding: 1px;
+  background: config.$colors-border-gradient;
+  border-radius: 10px;
+}
+
+.main__checkbox-list {
+  margin: 0 1px;
+  padding: 15px;
+  background: config.$colors-unactive-input;
   border-radius: 10px;
 }

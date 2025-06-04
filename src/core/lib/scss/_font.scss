@@ -2,10 +2,10 @@
   @font-face {
     font-family: $name;
     src: local("#{$name}"),
-      url("../assets/fonts/#{$fileName}/#{$fileName}.woff2") format("woff2"),
-      url("../assets/fonts/#{$fileName}/#{$fileName}.woff") format("woff"),
-      url("../assets/fonts/#{$fileName}/#{$fileName}.ttf") format("truetype"),
-      url("../assets/fonts/#{$fileName}/#{$fileName}.svg#Proxima-Nova") format("svg");
+      url("../assets/fonts/#{$name}/#{$fileName}.woff2") format("woff2"),
+      url("../assets/fonts/#{$name}/#{$fileName}.woff") format("woff"),
+      url("../assets/fonts/#{$name}/#{$fileName}.ttf") format("truetype"),
+      url("../assets/fonts/#{$name}/#{$fileName}.svg##{name}") format("svg");
     font-weight: $weight;
     font-style: normal;
     font-display: swap;

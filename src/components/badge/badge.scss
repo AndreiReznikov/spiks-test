@@ -1,10 +1,17 @@
+@use "../core/config/scss" as config;
+
 .badge {
   display: flex;
   padding: 5px 8px;
-  background: green;
+  background: config.$colors-dark-green;
   border: none;
   border-radius: 20px;
-  color: white;
+  color: config.$colors-white;
+
+  &__text {
+    font-size: 12px;
+    font-weight: 400;
+  }
 
   &__close {
     display: flex;
@@ -15,8 +22,8 @@
     height: 18px;
     padding: 0;
     border: none;
-    background: green;
-    border: 1px solid white;
+    background: config.$colors-light-green;
+    border: 1px solid config.$colors-white;
     border-radius: 50%;
     cursor: pointer;
   }
@@ -35,7 +42,7 @@
     left: 50%;
     width: 100%;
     height: 1px;
-    background: white;
+    background: config.$colors-white;
   }
 
   &__close-icon::before {
