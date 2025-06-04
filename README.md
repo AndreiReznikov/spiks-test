@@ -1,3 +1,7 @@
+# GitHub Pages:
+
+[Посмотреть демонстрацию](https://andreireznikov.github.io/spiks-test/)
+
 ## Команды
 
 Запустить проект
@@ -12,20 +16,8 @@ npm run start
 npm run build
 ```
 
-Задеплоить проект 
+Задеплоить проект
 
 ```
 npm run deploy
-```
-
-
-## Перегон токенов
-  * открыть папку tokens в терминале и вызвать
-```
-node exportTokens.js
-```
-  * файл с переменными будет собран в config/scss/_tokens.scss
-  * импортировать переменные в config/scss/index.scss
-```
-@forward "./tokens" as tokens-*;
 ```
