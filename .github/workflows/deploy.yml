@@ -26,6 +26,15 @@ jobs:
       - name: Run Gulp build
         run: npx gulp build
 
+      - name: Initialize Git in .publish
+        run: |
+          cd .publish
+          git init
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Initial commit"
+
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/marketplace-test'
         run: npx gulp deploy
