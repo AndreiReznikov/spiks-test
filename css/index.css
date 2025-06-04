@@ -305,6 +305,20 @@
   transform: rotate(45deg);
 }
 
+html,
+body {
+  font-family: "Proxima Nova", Arial, sans-serif;
+  background-color: #171722;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova"), url("../assets/fonts/proxima-nova/proxima-nova.woff2") format("woff2"), url("../assets/fonts/proxima-nova/proxima-nova.woff") format("woff"), url("../assets/fonts/proxima-nova/proxima-nova.ttf") format("truetype"), url("../assets/fonts/proxima-nova/proxima-nova.svg#Proxima-Nova") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 .main__logo-wrapper {
   margin: 50px;
 }
@@ -356,5 +370,4 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #171722;
 }
