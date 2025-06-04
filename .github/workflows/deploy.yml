@@ -35,4 +35,4 @@ jobs:
         if: github.ref == 'refs/heads/marketplace-test'
         run: npx gulp deploy
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
