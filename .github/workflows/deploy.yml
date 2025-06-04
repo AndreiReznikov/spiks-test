@@ -36,6 +36,8 @@ jobs:
 
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/marketplace-test'
-        run: npx gulp deploy
+        run: |
+          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          npx gulp deploy
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
