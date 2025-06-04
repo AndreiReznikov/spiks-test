@@ -1,5 +1,7 @@
+@use "../../core/config/scss" as config;
+
 .checkbox-list {
-  color: #ffffff;
+  color: config.$colors-white;
 
   &__title {
     display: flex;
@@ -21,7 +23,7 @@
       display: block;
       width: 8px;
       height: 8px;
-      border: 1px solid gray;
+      border: 1px solid config.$colors-unactive-body-form;
       border-width: 0 2px 2px 0;
       box-sizing: border-box;
       transform: rotate(45deg);
@@ -57,7 +59,7 @@
   &__item-text {
     max-width: 192px;
     padding-left: 30px;
-    color: white;
+    color: config.$colors-white;
     line-height: 20px;
   }
 
@@ -71,7 +73,16 @@
     width: 20px;
     height: 20px;
     border-radius: 4px;
-    background: #6bab2b;
+    background: config.$colors-green;
+  }
+
+  &__item-input:not(:checked) ~ &__item-custom-input {
+    background: transparent;
+    border: 1px solid config.$colors-unactive-body-form;
+  }
+
+  &__item-input:not(:checked) ~ &__item-text {
+    color: config.$colors-unactive-body-form;
   }
 
   &__item-input:checked + &__item-custom-input::after {
@@ -81,7 +92,7 @@
     top: 2px;
     width: 5px;
     height: 10px;
-    border: solid white;
+    border: solid config.$colors-white;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
   }

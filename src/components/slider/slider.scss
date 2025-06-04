@@ -1,5 +1,7 @@
+@use "../../core/config/scss" as config;
+
 .slider {
-  color: white;
+  color: config.$colors-white;
 
   &__title {
     margin-bottom: 30px;
@@ -11,9 +13,10 @@
     margin-top: 15px;
   }
 
-  &__limit-min, &__limit-max {
+  &__limit-min,
+  &__limit-max {
     padding: 1px 5px;
-    border: 1px solid #606060;
+    border: 1px solid config.$colors-border;
     border-radius: 3px;
   }
 
@@ -26,7 +29,7 @@
   &-target {
     height: 4px;
     border: none;
-    background: #30303d;
+    background: config.$colors-slider-gray;
     box-shadow: none;
     cursor: pointer;
   }
@@ -37,7 +40,8 @@
 
   &-connect {
     left: 8px;
-    background: #85d62d;
+    background: config.$colors-slider-green;
+    box-shadow: 0px 3px 15px 0px rgba(132, 213, 44, 0.31);
   }
 
   &-handle::after,
@@ -48,17 +52,17 @@
   &-horizontal &-handle {
     width: 16px;
     height: 16px;
-    background: #85d62d;
+    background: config.$colors-handle-gradient;
     border: none;
     border-radius: 50%;
-    box-shadow: none;
+    box-shadow: 3px 5px 12px 0px rgba(255, 255, 255, 0.2) inset;
     cursor: pointer;
   }
 
   &-horizontal &-tooltip {
     bottom: 180%;
-    color: white;
-    background: #30303d;
+    color: config.$colors-white;
+    background: config.$colors-slider-gray;
     border: none;
 
     &::after {
@@ -70,8 +74,9 @@
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: 8px 6px 0 6px;
-      border-color: #30303d transparent transparent transparent;
+      border-width: 6px 6px 0 6px;
+      border-color: config.$colors-slider-gray transparent transparent
+        transparent;
     }
   }
 }
