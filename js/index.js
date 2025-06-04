@@ -63,11 +63,11 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     }, {
       id: '12',
       text: "Today",
-      checked: true
+      checked: false
     }, {
       id: '13',
       text: "Next Week",
-      checked: true
+      checked: false
     }]
   }, {
     id: '2',
@@ -83,15 +83,15 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     }, {
       id: '22',
       text: "Medium",
-      checked: true
+      checked: false
     }, {
       id: '23',
       text: "Small",
-      checked: true
+      checked: false
     }, {
       id: '24',
       text: "Tiny",
-      checked: true
+      checked: false
     }]
   }];
   var state = {

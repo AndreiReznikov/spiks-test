@@ -13,11 +13,13 @@
       </div>
       <div class="layout__main">
         <main class="main">
-          <div class="main__logo-wrapper"><a href="/"><img src="assets/media/marketplace-logo.svg"/></a>
-          </div>
-          <div class="main__search-wrapper">
-            <div class="search">
-              <input class="search__input" placeholder="Search"/>
+          <div class="main__search-block">
+            <div class="main__logo-wrapper"><a href="/"><img src="assets/media/marketplace-logo.svg"/></a>
+            </div>
+            <div class="main__search-wrapper">
+              <div class="search">
+                <input class="search__input" placeholder="Search"/>
+              </div>
             </div>
           </div>
           <div class="main__slider-wrapper">
@@ -30,82 +32,93 @@
               </div>
             </div>
           </div>
-          <div class="main__badge-wrapper"></div>
+          <div class="main__result-block">
+            <div class="main__result-count">1034,5 Results</div>
+            <div class="main__badge-wrapper"></div>
+          </div>
           <div class="main__checkbox-list-wrapper">
-            <div class="checkbox-list checkbox-list_opened" data-id="0">
-              <div class="checkbox-list__title">Classification<span class="checkbox-list__arrow"></span></div>
-              <ul class="checkbox-list__list">
-                <li class="checkbox-list__item" data-id="00">
-                  <label class="checkbox-list__item-label">
-                    <input class="checkbox-list__item-input" type="checkbox" checked="checked"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Vegetables</span>
-                  </label>
-                </li>
-                <li class="checkbox-list__item" data-id="01">
-                  <label class="checkbox-list__item-label">
-                    <input class="checkbox-list__item-input" type="checkbox"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Carbs</span>
-                  </label>
-                </li>
-                <li class="checkbox-list__item" data-id="02">
-                  <label class="checkbox-list__item-label">
-                    <input class="checkbox-list__item-input" type="checkbox" checked="checked"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Fats</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-            <div class="checkbox-list checkbox-list_opened" data-id="1">
-              <div class="checkbox-list__title">Delivery Period<span class="checkbox-list__arrow"></span></div>
-              <ul class="checkbox-list__list">
-                <li class="checkbox-list__item" data-id="10">
-                  <label class="checkbox-list__item-label">
-                    <input class="checkbox-list__item-input" type="checkbox" checked="checked"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">1 h</span>
-                  </label>
-                </li>
-                <li class="checkbox-list__item" data-id="11">
-                  <label class="checkbox-list__item-label">
-                    <input class="checkbox-list__item-input" type="checkbox"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">24 h</span>
-                  </label>
-                </li>
-                <li class="checkbox-list__item" data-id="12">
-                  <label class="checkbox-list__item-label">
-                    <input class="checkbox-list__item-input" type="checkbox" checked="checked"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Today</span>
-                  </label>
-                </li>
-                <li class="checkbox-list__item" data-id="13">
-                  <label class="checkbox-list__item-label">
-                    <input class="checkbox-list__item-input" type="checkbox" checked="checked"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Next Week</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-            <div class="checkbox-list checkbox-list_opened" data-id="2">
-              <div class="checkbox-list__title">Size<span class="checkbox-list__arrow"></span></div>
-              <ul class="checkbox-list__list">
-                <li class="checkbox-list__item" data-id="20">
-                  <label class="checkbox-list__item-label">
-                    <input class="checkbox-list__item-input" type="checkbox" checked="checked"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Huge</span>
-                  </label>
-                </li>
-                <li class="checkbox-list__item" data-id="21">
-                  <label class="checkbox-list__item-label">
-                    <input class="checkbox-list__item-input" type="checkbox"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Large</span>
-                  </label>
-                </li>
-                <li class="checkbox-list__item" data-id="22">
-                  <label class="checkbox-list__item-label">
-                    <input class="checkbox-list__item-input" type="checkbox" checked="checked"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Medium</span>
-                  </label>
-                </li>
-                <li class="checkbox-list__item" data-id="23">
-                  <label class="checkbox-list__item-label">
-                    <input class="checkbox-list__item-input" type="checkbox" checked="checked"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Small</span>
-                  </label>
-                </li>
-                <li class="checkbox-list__item" data-id="24">
-                  <label class="checkbox-list__item-label">
-                    <input class="checkbox-list__item-input" type="checkbox" checked="checked"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Tiny</span>
-                  </label>
-                </li>
-              </ul>
+            <div class="main__checkbox-list">
+              <div class="main__checkbox-list-group">
+                <div class="checkbox-list checkbox-list_opened" data-id="0">
+                  <div class="checkbox-list__title">Classification<span class="checkbox-list__arrow"></span></div>
+                  <ul class="checkbox-list__list">
+                    <li class="checkbox-list__item" data-id="00">
+                      <label class="checkbox-list__item-label">
+                        <input class="checkbox-list__item-input" type="checkbox" checked="checked"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Vegetables</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item" data-id="01">
+                      <label class="checkbox-list__item-label">
+                        <input class="checkbox-list__item-input" type="checkbox"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Carbs</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item" data-id="02">
+                      <label class="checkbox-list__item-label">
+                        <input class="checkbox-list__item-input" type="checkbox" checked="checked"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Fats</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="main__checkbox-list-group">
+                <div class="checkbox-list checkbox-list_opened" data-id="1">
+                  <div class="checkbox-list__title">Delivery Period<span class="checkbox-list__arrow"></span></div>
+                  <ul class="checkbox-list__list">
+                    <li class="checkbox-list__item" data-id="10">
+                      <label class="checkbox-list__item-label">
+                        <input class="checkbox-list__item-input" type="checkbox" checked="checked"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">1 h</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item" data-id="11">
+                      <label class="checkbox-list__item-label">
+                        <input class="checkbox-list__item-input" type="checkbox"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">24 h</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item" data-id="12">
+                      <label class="checkbox-list__item-label">
+                        <input class="checkbox-list__item-input" type="checkbox"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Today</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item" data-id="13">
+                      <label class="checkbox-list__item-label">
+                        <input class="checkbox-list__item-input" type="checkbox"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Next Week</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="main__checkbox-list-group">
+                <div class="checkbox-list checkbox-list_opened" data-id="2">
+                  <div class="checkbox-list__title">Size<span class="checkbox-list__arrow"></span></div>
+                  <ul class="checkbox-list__list">
+                    <li class="checkbox-list__item" data-id="20">
+                      <label class="checkbox-list__item-label">
+                        <input class="checkbox-list__item-input" type="checkbox" checked="checked"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Huge</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item" data-id="21">
+                      <label class="checkbox-list__item-label">
+                        <input class="checkbox-list__item-input" type="checkbox"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Large</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item" data-id="22">
+                      <label class="checkbox-list__item-label">
+                        <input class="checkbox-list__item-input" type="checkbox"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Medium</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item" data-id="23">
+                      <label class="checkbox-list__item-label">
+                        <input class="checkbox-list__item-input" type="checkbox"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Small</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item" data-id="24">
+                      <label class="checkbox-list__item-label">
+                        <input class="checkbox-list__item-input" type="checkbox"/><span class="checkbox-list__item-custom-input"></span><span class="checkbox-list__item-text">Tiny</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </main>
