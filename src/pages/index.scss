@@ -1,7 +1,16 @@
+@use '../core/config/scss' as config;
+@use '../core/lib/scss' as lib;
 @use '../components/search/search';
 @use '../components/slider/slider';
 @use '../components/badge/badge';
 @use '../components/checkbox-list/checkbox-list';
+
+html, body {
+  @include lib.font('Proxima Nova', 600, 'proxima-nova');
+
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  background-color: config.$colors-bg-color;
+}
 
 .main__logo-wrapper {
   margin: 50px;
