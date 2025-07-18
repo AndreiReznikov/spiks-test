@@ -1,6 +1,6 @@
 # GitHub Pages:
 
-[Посмотреть демонстрацию](https://andreireznikov.github.io/spiks-test/)
+[Посмотреть демонстрацию](https://andreireznikov.github.io/spiks/)
 
 ## Команды
 
